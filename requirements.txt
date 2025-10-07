@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+httpx
+beautifulsoup4
+lxml
+pydantic
+sqlalchemy
+alembic        # optional later for migrations
+apscheduler
+python-dotenv
+pytest
+jikanpy        # for MyAnimeList enrichment later
+playwright     # optional — install only if/when you use it
