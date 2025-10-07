@@ -1,0 +1,12 @@
+pyproject.toml
+anime_scraper_api.egg-info/PKG-INFO
+anime_scraper_api.egg-info/SOURCES.txt
+anime_scraper_api.egg-info/dependency_links.txt
+anime_scraper_api.egg-info/top_level.txt
+app/__init__.py
+app/main.py
+app/fetchers/__init__.py
+app/fetchers/anilist.py
+app/utils/__init__.py
+app/utils/season.py
+tests/test_season.py

@@ -1,15 +1,24 @@
 from datetime import date
-from typing import Tuple
+from typing import Optional
 
-def current_season(today: date = None) -> Tuple[int, str]:
-    """Return (year, SEASON) where SEASON in {'WINTER','SPRING','SUMMER','FALL'}."""
+def current_season(today: Optional[date] = None) -> dict:
     if today is None:
         today = date.today()
-    m = today.month
-    if m in (1, 2, 3):
-        return today.year, "WINTER"
-    if m in (4, 5, 6):
-        return today.year, "SPRING"
-    if m in (7, 8, 9):
-        return today.year, "SUMMER"
-    return today.year, "FALL"
+
+    year = today.year
+    month = today.month
+
+    if month in (12, 1, 2):
+        season = "Winter"
+    elif month in (3, 4, 5):
+        season = "Spring"
+    elif month in (6, 7, 8):
+        season = "Summer"
+    else:
+        season = "Fall"
+
+    return {
+        "season": season,
+        "year": year,
+        "label": f"{season} {year}",
+    }
